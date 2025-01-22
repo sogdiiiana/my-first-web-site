@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Me</title>
+        <link rel="icon" href="C:/Users/Sogdiana/Downloads/cartoon-girl.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+            body{
+                font-family: 'Courier New', Courier, monospace;
+                margin: 0;
+                padding: 0;
+                background-color: rgba(255, 176, 176, 0.952);
+            }
+            .highlight1 {
+            font-size: 2em; 
+            color: rgb(255, 94, 94); 
+            }
+            .highlight2 {
+            font-size: 2em; 
+            color: rgb(255, 0, 0); 
+            }
+            .container{
+                width: 80%;
+                margin: auto;
+                overflow: hidden; 
+            }
+            header{
+                font-family: 'Courier New', Courier;
+                background: #333;
+                color: #fff;
+                padding-top: 30px;
+                min-height: 70px;
+                border-bottom: #ff0000 5px solid;
+            }
+            header a{
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 16px;
+            }
+            header ul{
+                padding: 0;
+                list-style: none;
+            }
+            header li{
+                float: left;
+                display: inline;
+                padding: 0 20px 0 20px;
+            }
+            .main{
+                padding: 20px;
+                background: #fff;
+                margin-top: 20px;
+            }
+            .main h1{
+                text-align: center;              
+            }
+            .main p{
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1><span class="highlight2">About</span> <span class ="highlight1">Me</span>  
+                    <button id="celebrateButton">clickMe</button>
+                </h1>
+            </div>
+            
+        </header>
+        <div class="container main">
+            <h2><p>
+                <span style="color: red;">H</span>
+                <span style="color: orange;">e</span>
+                <span style="color: yellow;">l</span>
+                <span style="color: green;">l</span>
+                <span style="color: blue;">o</span>
+                <span style="color: violet;"> , </span>
+                <span style="color: pink;">  </span>
+                <span style="color: brown;">I</span>
+                <span style="color: purple;">  </span>
+                <span style="color: teal;">a</span>
+                <span style="color: crimson;">m</span>
+                <span style="color: darkorange;">  </span>
+                <span style="color: lime;">R</span>
+                <span style="color: gold;">a</span>
+                <span style="color: coral;">v</span>
+                <span style="color: aqua;">s</span>
+                <span style="color: khaki;">h</span>
+                <span style="color: navy;">a</span>
+                <span style="color: maroon;">n</span>
+                <span style="color: salmon;">o</span>
+                <span style="color: indigo;">v</span>
+                <span style="color: olive;">a</span>
+                <span style="color: black;">  </span>
+                <span style="color: silver;">S</span>
+                <span style="color: darkgreen;">o</span>
+                <span style="color: tomato;">g</span>
+                <span style="color: skyblue;">d</span>
+                <span style="color: chocolate;">i</span>
+                <span style="color: cyan;">a</span>
+                <span style="color: violet;">n</span>
+                <span style="color: magenta;">a</span>
+            </p>
+            </h2>
+            <p>I like studying , but don't have really much time
+                 for that because of my work . I am interested in learning 
+                 languages , both human languages and programming languages .
+                  Currently I am learning Korean and HTML :D . I usually fall
+                   asleep during tutorials and lectures if it's quite and boring(( ,
+                    hope that won't happen on this course)) .       
+            </p>
+            <div style="text-align: center;">
+                <img src="C:/Users/Sogdiana/Downloads/giphy.gif" alt="Funny GIF" width="500px">
+            </div>
+            
+            <p>
+                <div>
+                    <img src="C:\Users\Sogdiana\Desktop\all in all\linkedIn QR.jpg" width="100px" height="100px">
+                </div>
+                <a href="https://www.linkedin.com/in/sogdiana-ravshanova-a478872b0/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn                
+            </a>
+        </p>
+       
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+        <script>
+            document.getElementById('celebrateButton').addEventListener('click', function() {
+                confetti({
+                    particleCount: 1000,      
+                    spread: 360,               
+                    origin: { x: 0.5, y: 0.5 }, 
+                    colors: ['#ff6347', '#ff4500', '#ffd700', '#00fa9a', '#1e90ff'] 
+                });
+            });
+        </script>
+    </body>
+</html>
