@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:/Users/Sogdiana/Downloads/cartoon-girl.jpg" type="image/x-icon">
+    <title>Lab 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <button onclick="window.location.href='about.html'">About me</button>
+        <button onclick="window.location.href='content.html'">photos and videos</button>
+        <button onclick="window.location.href='contact.html'">Contact</button>
+        <button onclick="window.location.href='Lab3.html'">Lab 3</button>
+    </div>
+
+    <div class="code">
+        <div class="scrollable-container">
+            <h2>Problem 4</h2>
+            <button class="expand-button">Show More</button>
+            <div class="scrollable-content">
+                <p>Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.</p>
+                <p>Description: This program calculates the area of a triangle using Heron's formula, given the lengths of its three sides.</p>
+                <pre><code>
+        function triangleArea(a, b, c) {
+            const s = (a + b + c) / 2; // Calculate the semi-perimeter
+            const area = Math.sqrt(s * (s - a) * (s - b) * (s - c)); // Calculate the area using Heron's formula
+            return area;
+        }
+        
+        const side1 = 5;
+        const side2 = 6;
+        const side3 = 7;
+        
+        const area = triangleArea(side1, side2, side3);
+        console.log("The area of the triangle is:", area);
+                </code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="code">
+        <div class="scrollable-container">
+            <h2>Problem 5</h2>
+            <button class="expand-button">Show More</button>
+            <div class="scrollable-content">
+                <p>Write a JavaScript program to rotate the string 'w3resource' in the right direction. This is done by periodically removing one letter from the string end and attaching it to the front.</p>
+                <p>Description: This program rotates the string 'w3resource' to the right by removing the last character and appending it to the front, repeatedly at set intervals.</p>
+                <pre><code>
+        function rotateString(str) {
+            return str[str.length - 1] + str.slice(0, str.length - 1); // Rotate string by moving last character to the front
+        }
+        
+        let rotatingString = 'w3resource';
+        
+        setInterval(() => {
+            rotatingString = rotateString(rotatingString);
+            console.log(rotatingString); // Log the rotated string every second
+        }, 1000);
+                </code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="code">
+        <div class="scrollable-container">
+            <h2>Problem 6</h2>
+            <button class="expand-button">Show More</button>
+            <div class="scrollable-content">
+                <p>Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.</p>
+                <p>Description: This program checks if a given year is a leap year by following the rules of the Gregorian calendar.</p>
+                <pre><code>
+        function isLeapYear(year) {
+            // A year is a leap year if it is divisible by 4, but not by 100, unless it is also divisible by 400
+            if (year % 4 === 0) {
+                if (year % 100 === 0) {
+                    if (year % 400 === 0) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        }
+        
+        const year = 2024; // Example year
+        console.log("Is " + year + " a leap year?", isLeapYear(year)); // Check if the year is a leap year
+                </code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="code">
+        <div class="scrollable-container">
+            <h2>Problem 7</h2>
+            <button class="expand-button">Show More</button>
+            <div class="scrollable-content">
+                <p>Write a JavaScript program to find out if 1st January will be a Sunday between 2014 and 2050.</p>
+                <p>Description: This program checks each year between 2014 and 2050 to determine if January 1st falls on a Sunday.</p>
+                <pre><code>
+        function findSundays() {
+            for (let year = 2014; year <= 2050; year++) {
+                let date = new Date(year, 0, 1); // Create a date object for January 1st of the current year
+                if (date.getDay() === 0) { // Check if the day is Sunday (0 represents Sunday)
+                    console.log("1st January is a Sunday in the year " + year);
+                }
+            }
+        }
+        
+        findSundays(); // Call the function to find and log years when January 1st is a Sunday
+                </code></pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const expandButtons = document.querySelectorAll('.expand-button');
+    const scrollableContainers = document.querySelectorAll('.scrollable-container');
+
+    expandButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            scrollableContainers[index].classList.toggle('expanded');
+            if (scrollableContainers[index].classList.contains('expanded')) {
+                button.textContent = 'Show Less';
+                const content = scrollableContainers[index].querySelector('.scrollable-content');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                button.textContent = 'Show More';
+                const content = scrollableContainers[index].querySelector('.scrollable-content');
+                content.style.maxHeight = '0';
+            }
+        });
+    });
+    </script>
+</body>
+</html>
